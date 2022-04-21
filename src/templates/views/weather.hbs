@@ -23,7 +23,7 @@
          <div class="tempInformation">
            <div class="top_layer">
              <p id="day">Tuesday</p>
-             <p id="today_date">13 OCT</p>
+             <p id="today_date_month">133 OCT</p>
            </div>
            <div class="main_layer ">
              <p id="city_name">Get the Temperature of your City🌍</p>
@@ -67,39 +67,47 @@ const getCurrentDay = () => {
        days = weekday[currentTime.getDay()];
        let day=document.getElementById('day');
       day.innerText=days;
+
+
+
+
+
+
+
     };
     getCurrentDay();
 
 
     const getCurrentMonth = () => {
-        var months = [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "June",
-          "July",
-          "Aug",
-          "Sept",
-          "Oct",
-          "Nov",
-          "Dec",
-        ];
+      var months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "July",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
 
-        var now = new Date();
-        var month = months[now.getMonth() ];
+      var now = new Date();
+      var month = months[now.getMonth() ];
+      console.log(month);
 
-        var date = now.getDate();
+      var date = now.getDate();
 
-        let hours = now.getHours();
-        let mins = now.getMinutes();
+      let hours = now.getHours();
+      let mins = now.getMinutes();
 
 
 
-        //return `${month} ${date}`;
-         let today_date=document.getElementById('today_date');
-        today_day.innerText=`${date} ${month}`;
+      //return `${month} ${date}`;
+       let today_date_month=document.getElementById('today_date_month');
+      today_date_month.innerText=`${date} ${month}`;
       };
 
       getCurrentMonth();

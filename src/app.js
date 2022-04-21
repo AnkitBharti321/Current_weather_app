@@ -2,6 +2,7 @@ const express=require("express");
 const app=express();
 const path=require("path");
 const hbs=require('hbs');
+const port=process.env.PORT || 8000;
 
 const staticPath=path.join(__dirname,"../public");
 const template_path=path.join(__dirname,"../src/templates/views");
@@ -30,6 +31,6 @@ app.get("/weather",(req,res)=>{
 app.get("*",(req,res)=>{
   res.render("error_404.hbs");
 });
-app.listen(8000 ,()=>{
-  console.log("listening to the port 8000");
+app.listen(port ,()=>{
+  console.log(`listening to the port ${port}`);
 });
